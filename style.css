@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --flamengo-red: #c0392b;
+    --stitch-blue: #3498db;
+    --dark-color: #2c3e50;
+    --light-color: #ecf0f1;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(45deg, var(--flamengo-red), #d35400);
+    color: white;
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.intro h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: var(--flamengo-red);
+}
+
+.intro p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.gallery h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    color: var(--stitch-blue);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    background-color: var(--dark-color);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+}
+
+/* Estilos do Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 85%;
+    max-height: 85%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 8px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-btn:hover {
+    color: var(--flamengo-red);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    .intro h2, .gallery h2 {
+        font-size: 1.8rem;
+    }
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+--flamengo-red: #c0392b;
+--stitch-blue: #3498db;
+--dark-color: #2c3e50;
+--light-color: #ecf0f1;
+}
+
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+body {
+font-family: 'Poppins', sans-serif;
+background-color: var(--light-color);
+color: var(--dark-color);
+line-height: 1.6;
+}
+
+header {
+background: linear-gradient(45deg, var(--flamengo-red), #d35400);
+color: white;
+padding: 1.5rem;
+text-align: center;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+font-size: 2rem;
+font-weight: 700;
+text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+main {
+max-width: 100%; /* Adjusted for full width on smaller screens */
+margin: 1.5rem auto;
+padding: 0 1rem;
+}
+
+.intro {
+text-align: center;
+margin-bottom: 2rem;
+}
+
+.intro h2 {
+font-size: 1.8rem;
+margin-bottom: 0.8rem;
+color: var(--flamengo-red);
+}
+
+.intro p {
+font-size: 1rem;
+max-width: 95%;
+margin: 0 auto 1rem;
+}
+
+.gallery h2 {
+text-align: center;
+font-size: 1.8rem;
+margin-bottom: 1.5rem;
+color: var(--stitch-blue);
+}
+
+.gallery-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Smaller minimum width for more columns on small screens */
+gap: 1rem;
+}
+
+.gallery-img {
+width: 100%;
+height: auto; /* Adjust height automatically based on width /
+aspect-ratio: 1 / 1; / Maintain a 1:1 aspect ratio for square images */
+object-fit: cover;
+border-radius: 8px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+cursor: pointer;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-img:hover {
+transform: scale(1.03);
+box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+background-color: var(--dark-color);
+color: white;
+text-align: center;
+padding: 1rem;
+margin-top: 2rem;
+font-size: 0.9rem;
+}
+
+/* Estilos do Modal */
+.modal {
+display: none;
+position: fixed;
+z-index: 1000;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+overflow: auto;
+background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+margin: auto;
+display: block;
+max-width: 90%; /* Slightly larger modal on mobile /
+max-height: 90%; / Slightly larger modal on mobile */
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+border-radius: 6px;
+}
+
+.close-btn {
+position: absolute;
+top: 15px;
+right: 25px;
+color: #f1f1f1;
+font-size: 30px;
+font-weight: bold;
+cursor: pointer;
+transition: color 0.3s;
+}
+
+.close-btn:hover {
+color: var(--flamengo-red);
+}
+
+/* Media Queries para telas menores /
+@media (max-width: 600px) {
+header h1 {
+font-size: 1.7rem;
+}
+.intro h2, .gallery h2 {
+font-size: 1.5rem;
+}
+.gallery-grid {
+grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); / Even smaller minimum width for very small screens */
+
+
+.gallery-img {
+border-radius: 6px;
+}
+footer {
+padding: 1rem;
+font-size: 0.8rem;
+}
+.close-btn {
+top: 10px;
+right: 15px;
+font-size: 24px;
+}
+
+
+@media (max-width: 400px) {
+header h1 {
+font-size: 1.5rem;
+}
+.intro p {
+font-size: 0.9rem;
+}
+}
